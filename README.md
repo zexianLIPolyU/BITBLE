@@ -18,8 +18,8 @@ After installation, BITBLE can be run for a target matrix `A` as either:
  ```
 logging = true ; % logging of this algorithm
 offset = 0 ;     % Qubit offset of this quantum circuit
-[circuit, normalized_factor, info] = bitble( A, 'cutoff', 1e-4, logging, offset ) ;
-[circuit, normalized_factor, info] = bitble( A, 'percentage', 80, logging, offset ) ;
+[circuit, subnormalization_factor, info] = bitble( A, 'cutoff', 1e-4, logging, offset ) ;
+[circuit, subnormalization_factor, info] = bitble( A, 'percentage', 80, logging, offset ) ;
 ```
 
 SIABLE can be run for the similiar comman: 
@@ -27,8 +27,8 @@ SIABLE can be run for the similiar comman:
  ```
 logging = true ; % logging of this algorithm
 offset = 0 ;     % Qubit offset of this quantum circuit
-[circuit, normalized_factor, info] = siable( A, 'cutoff', 1e-4, logging, offset ) ;
-[circuit, normalized_factor, info] = siable( A, 'percentage', 80, logging, offset ) ;
+[circuit, subnormalization_factor, info] = siable( A, 'cutoff', 1e-4, logging, offset ) ;
+[circuit, subnormalization_factor, info] = siable( A, 'percentage', 80, logging, offset ) ;
 ```
     
 The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolute value, the second option
