@@ -13,14 +13,23 @@ In order to run the MATLAB implementation of BITBLE or SIABLE:
 3. Run `make_csd.m` in the file of `iwoodsawyer-csd-a23bac9`
 4. Add `bitblt_siable-qclab` and `QCLAB` directory to the file `bitblt_siable-qclab` or clone these two file in your MATLAB path.
 
-After installation, FABLE can be run for a target matrix `A` as either:
+After installation, BITBLE can be run for a target matrix `A` as either:
 
  ```
 logging = true ; % logging of this algorithm
 offset = 0 ;     % Qubit offset of this quantum circuit
 [circuit, normalized_factor, info] = bitble( A, 'cutoff', 1e-4, logging, offset ) ;
 [circuit, normalized_factor, info] = bitble( A, 'percentage', 80, logging, offset ) ;
-```  
+```
+
+SIABLE can be run for the similiar comman: 
+
+ ```
+logging = true ; % logging of this algorithm
+offset = 0 ;     % Qubit offset of this quantum circuit
+[circuit, normalized_factor, info] = siable( A, 'cutoff', 1e-4, logging, offset ) ;
+[circuit, normalized_factor, info] = siable( A, 'percentage', 80, logging, offset ) ;
+```
     
 The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolute value, the second option
 (`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
