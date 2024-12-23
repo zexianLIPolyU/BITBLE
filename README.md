@@ -22,7 +22,7 @@ offset = 0 ;     % Qubit offset of this quantum circuit
 [circuit, subnormalization_factor, info] = bitble( A, 'percentage', 80, logging, offset ) ;
 ```
 
-SIABLE can be run for the similiar comman: 
+SIABLE can be run by a similiar comman: 
 
  ```
 logging = true ; % logging of this algorithm
