@@ -23,6 +23,6 @@ offset = 0 ;     % Qubit offset of this quantum circuit
 ```  
     
 The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolute value, the second option
-(`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of FABLE.
+(`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
 
 ## Reference
