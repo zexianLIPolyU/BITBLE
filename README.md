@@ -1,7 +1,7 @@
 # BITBLE-SIABLE
-Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE): Two simulation-friendly block-encoding circuits. These two block-encoding protocols have inherited a circuit compression algorithm form [FABLE](https://github.com/QuantumComputingLab/fable), which have a lower subnormalization factors and require less ancillary qubits.
+Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE): Two simulation-friendly block-encoding circuits. These two block-encoding protocols inherit a circuit compression algorithm form [FABLE](https://github.com/QuantumComputingLab/fable), which have a lower subnormalization factors and require less ancillary qubits.
 
-These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab), and SIABLE are also bulit on top of [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition).
+These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab), and SIABLE is also bulit on top of [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition).
 
 
 ### QCLAB - MATLAB Implementation ###
@@ -10,8 +10,8 @@ In order to run the MATLAB implementation of BITBLE or SIABLE:
 
 1. Install [QCLAB](https://github.com/QuantumComputingLab/qclab)
 2. Install [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition)
-3. Run `make_csd.m` in the file of `iwoodsawyer-csd-a23bac9`
-4. Add `bitblt_siable-qclab` and `QCLAB` directory to the file `bitblt_siable-qclab` or clone these two file in your MATLAB path.
+3. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9`
+4. Add `iwoodsawyer-csd-a23bac9` and `QCLAB` files to the `bitblt_siable-qclab` file or clone all these three files into your MATLAB path.
 
 After installation, BITBLE can be run for a target matrix `A` as either:
 
@@ -22,7 +22,7 @@ offset = 0 ;     % Qubit offset of this quantum circuit
 [circuit, subnormalization_factor, info] = bitble( A, 'percentage', 80, logging, offset ) ;
 ```
 
-SIABLE can be run by a similiar comman: 
+SIABLE can be run with a similiar command: 
 
  ```
 logging = true ; % logging of this algorithm
