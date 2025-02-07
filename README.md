@@ -8,9 +8,9 @@ These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumCompu
 
 In order to run the MATLAB implementation of SIABLE:
 
-1. Install [QCLAB](https://github.com/QuantumComputingLab/qclab)
+Add `QCLAB` files and `bitble.m` (or `bitble2.m`) into your MATLAB path.
 
-BITBLE can be run for a target matrix `A` as either:
+SIABLE can be run for a target matrix `A` as either:
 
  ```
 logging = true ; % logging of this algorithm
@@ -26,12 +26,10 @@ The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolu
 
 In order to run the MATLAB implementation of SIABLE:
 
-1. Install [QCLAB](https://github.com/QuantumComputingLab/qclab), which has been packed
-2. Install [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition)
-3. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9`
-4. Add `iwoodsawyer-csd-a23bac9` and `QCLAB` files to the `bitblt_siable-qclab` file or clone all these three files into your MATLAB path.
+1. Add `QCLAB` and `iwoodsawyer-csd-a23bac9` files and `siable.m` into your MATLAB path.
+2. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9`
 
-After installation, SIABLE can be run with a similiar command: 
+After compilation, SIABLE can be run with a similiar command: 
 
  ```
 logging = true ; % logging of this algorithm
