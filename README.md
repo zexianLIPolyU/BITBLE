@@ -4,7 +4,33 @@ Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE): 
 These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab), and SIABLE is also bulit on top of [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition).
 
 
-## 1. Binary Tree Block-Encoding (BITBLE) - MATLAB Implementation ##
+## 1. Single Ancilla Block-Encoding (SIABLE) - MATLAB Implementation ##
+
+In order to run the MATLAB implementation of SIABLE:
+
+1. Add `QCLAB` and `iwoodsawyer-csd-a23bac9` files and `siable.m` into your MATLAB path.
+2. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9`
+
+After compilation, SIABLE can be run with a similiar command: 
+
+ ```
+N = pow2(3);
+A = randn(N, N);
+logging = true ; % logging of this algorithm
+offset = 0 ;     % Qubit offset of this quantum circuit
+circuit_sim = true ; % true/false, if false info will only compute the circuit's parameters; if true info will also simulate the quantum circuit
+[circuit, normalization_factor, info] = siable( A, 'cutoff', 1e-4, logging, offset, circuit_sim ) ;
+% [circuit, normalization_factor, info] = siable( A, 'percentage', 80, logging, offset, circuit_sim ) ;
+circuit.draw();
+info
+```
+The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolute value, the second option
+(`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
+
+
+
+
+## 2. Binary Tree Block-Encoding (BITBLE) - MATLAB Implementation ##
 
 In order to run the MATLAB implementation of BITBLE:
 
@@ -32,33 +58,11 @@ info
 The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolute value, the second option
 (`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
 
-## 2. Binary Tree Block-Encoding (BITBLE) - PYTHON Implementation ##
+## 3. Binary Tree Block-Encoding (BITBLE) - PYTHON Implementation ##
 
 Link: [BITBLE_python](https://github.com/zexianLIPolyU/BITBLE_python).
 
 
 
-## 3. Single Ancilla Block-Encoding (SIABLE) - MATLAB Implementation ##
-
-In order to run the MATLAB implementation of SIABLE:
-
-1. Add `QCLAB` and `iwoodsawyer-csd-a23bac9` files and `siable.m` into your MATLAB path.
-2. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9`
-
-After compilation, SIABLE can be run with a similiar command: 
-
- ```
-N = pow2(3);
-A = randn(N, N);
-logging = true ; % logging of this algorithm
-offset = 0 ;     % Qubit offset of this quantum circuit
-circuit_sim = true ; % true/false, if false info will only compute the circuit's parameters; if true info will also simulate the quantum circuit
-[circuit, normalization_factor, info] = siable( A, 'cutoff', 1e-4, logging, offset, circuit_sim ) ;
-% [circuit, normalization_factor, info] = siable( A, 'percentage', 80, logging, offset, circuit_sim ) ;
-circuit.draw();
-info
-```
-The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolute value, the second option
-(`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
 
 ## Reference
