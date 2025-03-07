@@ -6,7 +6,7 @@ These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumCompu
 
 ## 1. Single Ancilla Block-Encoding (SIABLE) - MATLAB Implementation ##
 
-In order to run the MATLAB implementation of SIABLE:
+In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab):
 
 1. Add `QCLAB` and `iwoodsawyer-csd-a23bac9` files and `siable.m` into your MATLAB path.
 2. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9`
@@ -32,7 +32,7 @@ The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolu
 
 ## 2. Binary Tree Block-Encoding (BITBLE) - MATLAB Implementation ##
 
-In order to run the MATLAB implementation of BITBLE:
+In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/bitble-qclab):
 
 Add `QCLAB` files and `bitble.m` (or `bitble2.m` or `bitble3.m`) into your MATLAB path.
 
