@@ -13,6 +13,10 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
 
 After compilation, SIABLE can be run with a similiar command: 
 
+test_siable.m
+
+or
+
  ```
 N = pow2(3);
 A = randn(N, N);
