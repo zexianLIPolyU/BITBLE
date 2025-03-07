@@ -1,10 +1,12 @@
-# Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE)
-Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE): Two block-encoding circuits for encoding general matrices. 
+# Single Ancilla Block-Encoding (SIABLE) and Binary Tree Block-Encoding (BITBLE) 
+Single Ancilla Block-Encoding (SIABLE) and Binary Tree Block-Encoding (BITBLE): Two block-encoding circuits for encoding general matrices. 
 
 These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab), and SIABLE is also bulit on top of [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition).
 
 
 ## 1. Single Ancilla Block-Encoding (SIABLE) - MATLAB Implementation ##
+
+SIABLE have optimal normalization factor $\Vert A\Vert_2$ with single ancilla qubit.
 
 In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab):
 
