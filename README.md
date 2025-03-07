@@ -30,7 +30,7 @@ The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolu
 
 ## 2. Binary Tree Block-Encoding (BITBLE) - PYTHON Implementation ##
 
-[https://www.runoob.com](https://github.com/zexianLIPolyU/BITBLE_python）
+Link: [https://www.runoob.com](https://github.com/zexianLIPolyU/BITBLE_python）
 
 
 
