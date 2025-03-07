@@ -9,12 +9,13 @@ These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumCompu
 In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab):
 
 1. Add `QCLAB` and `iwoodsawyer-csd-a23bac9` files and `siable.m` into your MATLAB path.
-2. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9`
+2. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9` (The Windows version of MATLAB can compile more smoothly).
 
 After compilation, SIABLE can be run with a similiar command: 
 
-test_siable.m
-
+ ```
+run("test_siable.m")
+ ```
 or
 
  ```
