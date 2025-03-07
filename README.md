@@ -6,11 +6,12 @@ These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumCompu
 
 ## 1. Binary Tree Block-Encoding (BITBLE) - MATLAB Implementation ##
 
-In order to run the MATLAB implementation of SIABLE:
+In order to run the MATLAB implementation of BITBLE:
 
-Add `QCLAB` files and `bitble.m` (or `bitble2.m`) into your MATLAB path.
+Add `QCLAB` files and `bitble.m` (or `bitble2.m` or `bitble3.m`) into your MATLAB path.
 
 BITBLE can be run for a target matrix `A` as either:
+
 
  ```
 N = pow2(3);
@@ -27,7 +28,13 @@ info
 The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolute value, the second option
 (`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
 
-## 2. Single Ancilla Block-Encoding (SIABLE) - MATLAB Implementation ##
+## 2. Binary Tree Block-Encoding (BITBLE) - PYTHON Implementation ##
+
+In order to run the PYTHON implementation of BITBLE:
+
+
+
+## 3. Single Ancilla Block-Encoding (SIABLE) - MATLAB Implementation ##
 
 In order to run the MATLAB implementation of SIABLE:
 
