@@ -10,9 +10,9 @@ In order to run the MATLAB implementation of BITBLE:
 
 Add `QCLAB` files and `bitble.m` (or `bitble2.m` or `bitble3.m`) into your MATLAB path.
 
-### `bitble.m` : Binary tree block encoding (BITBLE) using recursive multiplexed rotations
-### `bitble2.m`: Binary tree block encoding (BITBLE2) using permutative multiplexed rotations
-### `bitble3.m`: Binary tree block encoding (BITBLE3) with normalization factor of S_q(A) using recursive multiplexed rotations
+### `bitble.m` : Binary tree block encoding with normalization factor of $||A||_F$ using recursive multiplexed rotations
+### `bitble2.m`: Binary tree block encoding with normalization factor of $||A||_F$ using permutative multiplexed rotations
+### `bitble3.m`: Binary tree block encoding with normalization factor of S_q(A) using recursive multiplexed rotations
 
 BITBLE can be run for a target matrix `A` as either:
 
