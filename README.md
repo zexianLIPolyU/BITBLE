@@ -13,8 +13,8 @@ Add `QCLAB` files and `bitble.m` (or `bitble2.m`) into your MATLAB path.
 BITBLE can be run for a target matrix `A` as either:
 
  ```
-% N = pow2(3);
-% A = randn(N, N);
+N = pow2(3);
+A = randn(N, N);
 logging = true ; % logging of this algorithm
 offset = 0 ;     % Qubit offset of this quantum circuit
 circuit_sim = true ; % true/false, if false info will only compute the circuit's parameters; if true info will also simulate the quantum circuit
@@ -37,8 +37,8 @@ In order to run the MATLAB implementation of SIABLE:
 After compilation, SIABLE can be run with a similiar command: 
 
  ```
-% N = pow2(3);
-% A = randn(N, N);
+N = pow2(3);
+A = randn(N, N);
 logging = true ; % logging of this algorithm
 offset = 0 ;     % Qubit offset of this quantum circuit
 circuit_sim = true ; % true/false, if false info will only compute the circuit's parameters; if true info will also simulate the quantum circuit
