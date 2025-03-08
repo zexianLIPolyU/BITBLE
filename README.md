@@ -121,7 +121,7 @@ info
 The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolute value, the second option
 (`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
 
-Output:
+Output (The **Mac** system will display the content without any dislocation.):
 ```
      ┏━━┓   ┏━━┓   ┏━━┓   ┏━━┓   ┏━━┓   ┏━━┓   ┏━━┓   ┏━━┓                                                                                                                                                                                                                                                                                                                                                                                                   ┏━━┓ 
 q0: ━┫RY┣━⊕━┫RY┣━⊕━┫RY┣━⊕━┫RY┣━⊕━┫RY┣━⊕━┫RY┣━⊕━┫RY┣━⊕━┫RY┣━⊕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━●━⨯━━━━━●━━━━━━━━━━━━━●━━━━━━━━●━━━━━━●━┫RY┣━
