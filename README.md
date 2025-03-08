@@ -66,6 +66,8 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
     compr_val = 1e-8 ;
     circuit_sim = true ;
     [circuit, normalization_factor, info] = siable( A, compr_type, compr_val, logging, offset, circuit_sim ) ;
+    % offset = 0 ;
+    % logging = true ;
     % compr_type = 'percentage'; 
     % compr_val = 1e-8 ;
     % circuit_sim = true ;
