@@ -48,14 +48,13 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
     clc;clear;close all
     addpath("iwoodsawyer-csd-a23bac9"); % loading csd() 
     addpath("QCLAB");  % loading QCLAB
-    %% Define a matrix A in $\mathbb{C}^{2^n \times 2^n}$
+
     n = 3 ;
     A = randn(pow2(n),pow2(n)) + 1j .* randn(pow2(n),pow2(n)) ;
     ```
     The first option (`'cutoff'`) ignores coefficients smaller than `1e-8` in absolute value,
     the second option (`'percentage'`) applies an `80%` compression and only retains the `20%` largest coefficients.
     ```
-    % Simulate the quantum circuit 
     fprintf("\nSIABLE Block Encoding");
     fprintf("\n------------------------------------------------------------ \n");
     fprintf("parameter computing... \n") ;
