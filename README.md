@@ -30,7 +30,7 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
     ```
     run("test_csd.m");
     ```
-    If the dominator output:
+    If the screen output:
     ```
     ans =
     
