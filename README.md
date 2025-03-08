@@ -45,7 +45,6 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
     
      ```
     clc;clear;close all
-    % csd()  cosine-sine decomposition 
     addpath("iwoodsawyer-csd-a23bac9"); % loading csd() % https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition
     addpath("QCLAB");  %https://github.com/QuantumComputingLab/fable
     %% Define a matrix A in $\mathbb{C}^{2^n \times 2^n}$ and setting for SIABLE
