@@ -77,7 +77,7 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
     fprintf("1.0001 * 2-norm of A = %f \n",1.0001 *norm(A,2)) ;
     fprintf("normalization_factor = %f \n",normalization_factor) ;
     M = circuit.matrix;
-    fprintf("norm(normalization_factor.*M1(1:m,1:m)-A) = %e \n",norm(normalization_factor.*M(1:pow2(n),1:pow2(n))-A)) ;
+    fprintf("norm(normalization_factor.*M(1:pow2(n),1:pow2(n))-A) = %e \n",norm(normalization_factor.*M(1:pow2(n),1:pow2(n))-A)) ;
     if logging, info.circ; end
     circuit.draw();
     ```
