@@ -106,6 +106,8 @@ run("test_bitble.m")
  ```
 or
  ```
+clc ; clear ; close all ;
+addpath( 'QCLAB' ) ;
 N = pow2(3);
 A = randn(N, N);
 logging = true ; % logging of this algorithm
