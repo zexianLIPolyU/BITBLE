@@ -33,43 +33,44 @@ ans =
 
     1.0000
 ```
-then, ` csd()` has been compilation.
+then, `csd()` has been compilation.
 After compilation, SIABLE can be test: 
 
  ```
 run("test_siable.m")
  ```
-or
+or 
+
+Define a matrix `A`:
 
  ```
 clc;clear;close all
 % csd()  cosine-sine decomposition 
-
 addpath("iwoodsawyer-csd-a23bac9"); % loading csd() % https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition
 addpath("QCLAB");  %https://github.com/QuantumComputingLab/fable
-
 %% Define a matrix A in $\mathbb{C}^{2^n \times 2^n}$ and setting for SIABLE
 n = 3 ;
 m = pow2(n) ;
 A = randn(m,m) +randn(m,m).*1i ;
+```
+The first option (`'cutoff'`) ignores coefficients smaller than `1e-8` in absolute value, the second option
+(`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients.
+The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
+```
+% Simulate the quantum circuit 
+fprintf("\nSIABLE Block Encoding");
+fprintf("\n------------------------------------------------------------ \n");
+fprintf("parameter computing... \n") ;
 
 offset = 3 ;
 logging = 1 ;
 compr_type = 'cutoff' ;%'percentage'; 
 compr_val = 1e-8 ;
 circuit_sim = true ;
-
-% Simulate the quantum circuit 
-fprintf("\nSIABLE Block Encoding");
-fprintf("\n------------------------------------------------------------ \n");
-fprintf("parameter computing... \n") ;
-```
-```
 [circuit, normalization_factor, info] = siable( A, compr_type, compr_val, logging, offset, circuit_sim ) ;
 % [circuit, normalization_factor, info] = siable( A, 'percentage', 80, logging, offset, circuit_sim ) ;
 ```
-The first option (`'cutoff'`) ignores coefficients smaller than `1e-8` in absolute value, the second option
-(`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
+Show the result:
 ```
 fprintf("1.0001 * 2-norm of A = %f \n",1.0001 *norm(A,2)) ;
 fprintf("normalization_factor = %f \n",normalization_factor) ;
