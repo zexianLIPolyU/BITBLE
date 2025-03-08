@@ -30,7 +30,7 @@ ans =
     1.0000
 ```
 then, ` csd()` has been compilation.
-After compilation, SIABLE can be run with a similiar command: 
+After compilation, SIABLE can be test: 
 
  ```
 run("test_siable.m")
