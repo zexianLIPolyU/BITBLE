@@ -1,12 +1,12 @@
 # Single Ancilla Block-Encoding (SIABLE) and Binary Tree Block-Encoding (BITBLE) 
 Single Ancilla Block-Encoding (SIABLE) and Binary Tree Block-Encoding (BITBLE): Two block-encoding circuits for encoding general matrices. 
 
-| function      | normalization factor | Decoupled multiplexed rotations    |
-| -----------   | -----------          | -----------                        |
-| `siable.m`    | $\Vert A\Vert_2$     | permutative multiplexed rotations  |
-| `bitble.m`    | $\Vert A\Vert_F$     | recursive multiplexed rotations    |
-| `bitble2.m`   | $\Vert A\Vert_F$     | permutative multiplexed rotations  |
-| `bitble3.m`   | $\mu_p(A^T)=\sqrt{\max_j\Vert A_{\cdot,j}\Vert_{2p}^{2p}\cdot \max_i\Vert A_{i,\cdot}\Vert_{2(1-p)}^{2(1-p)}}$  | recursive multiplexed rotations    |
+| function      | normalization factor | Decoupled multiplexed rotations    | Ancilla qubits encoding $2^n\times 2^n$ matrix $A$  |
+| -----------   | -----------          | -----------                        |  -----------                                        |
+| `siable.m`    | $\Vert A\Vert_2$     | permutative multiplexed rotations  |  1                                                  |
+| `bitble.m`    | $\Vert A\Vert_F$     | recursive multiplexed rotations    |  n                                                  |
+| `bitble2.m`   | $\Vert A\Vert_F$     | permutative multiplexed rotations  |  n                                                  |
+| `bitble3.m`   | $\mu_p(A^T)=\sqrt{\max_j\Vert A_{\cdot,j}\Vert_{2p}^{2p}\cdot \max_i\Vert A_{i,\cdot}\Vert_{2(1-p)}^{2(1-p)}}$  | recursive multiplexed rotations    |  n+2 |
 
 These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab), and SIABLE is also bulit on top of [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition).
 
