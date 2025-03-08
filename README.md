@@ -10,9 +10,26 @@ SIABLE have optimal normalization factor $\Vert A\Vert_2$ with single ancilla qu
 
 In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab):
 
-1. Add `QCLAB` and `iwoodsawyer-csd-a23bac9` files and `siable.m` into your MATLAB path.
-2. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9` (The Windows version of MATLAB can compile more smoothly).
+1. Download [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab).
+2. Add `QCLAB` and `iwoodsawyer-csd-a23bac9` files and `siable.m` into your MATLAB path.
+3. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9` (The Windows version of MATLAB can compile more smoothly).
+```
+cd("iwoodsawyer-csd-a23bac9");
+run("make_csd.m");
+run("test_csd.m");
+```
+If the screen output:
+```
+ans =
 
+    1.0000
+
+
+ans =
+
+    1.0000
+```
+then, ` csd()` has been compilation.
 After compilation, SIABLE can be run with a similiar command: 
 
  ```
@@ -21,15 +38,38 @@ run("test_siable.m")
 or
 
  ```
-N = pow2(3);
-A = randn(N, N);
-logging = true ; % logging of this algorithm
-offset = 0 ;     % Qubit offset of this quantum circuit
-circuit_sim = true ; % true/false, if false info will only compute the circuit's parameters; if true info will also simulate the quantum circuit
-[circuit, normalization_factor, info] = siable( A, 'cutoff', 1e-4, logging, offset, circuit_sim ) ;
-% [circuit, normalization_factor, info] = siable( A, 'percentage', 80, logging, offset, circuit_sim ) ;
-circuit.draw();
-info
+clc;clear;close all
+% csd()  cosine-sine decomposition 
+
+addpath("iwoodsawyer-csd-a23bac9"); % loading csd() % https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition
+addpath("QCLAB");  %https://github.com/QuantumComputingLab/fable
+
+%% Define a matrix A in $\mathbb{C}^{2^n \times 2^n}$ and setting for SIABLE
+n = 3 ;
+m = pow2(n) ;
+A = randn(m,m) +randn(m,m).*1i ;
+
+offset = 3 ;
+logging = 1 ;
+compr_type = 'cutoff' ;%'percentage'; 
+compr_val = 1e-8 ;
+circuit_sim = true ;
+
+% Simulate the quantum circuit 
+fprintf("\nSIABLE Block Encoding");
+fprintf("\n------------------------------------------------------------ \n");
+fprintf("parameter computing... \n") ;
+tic ;
+[circuit, subnormalized_factor, info] = siable( A, compr_type, compr_val, logging, offset, circuit_sim ) ;
+toc ;
+fprintf("1.0001 * 2-norm of A = %f \n",1.0001 *norm(A,2)) ;
+fprintf("normalized_factor = %f \n",subnormalized_factor) ;
+M1 = circuit.matrix;
+fprintf("norm(subnormalized_factor.*M1(1:m,1:m)-A) = %e \n",norm(subnormalized_factor.*M1(1:m,1:m)-A)) ;
+if logging, info.circ; end 
+
+
+
 ```
 The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolute value, the second option
 (`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
