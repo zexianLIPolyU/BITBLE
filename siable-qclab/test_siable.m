@@ -28,4 +28,4 @@ M1 = circuit.matrix;
 fprintf("norm(subnormalized_factor.*M1(1:m,1:m)-A) = %e \n",norm(subnormalized_factor.*M1(1:m,1:m)-A)) ;
 if logging, info.circ; end 
 
-
+circuit.draw();
