@@ -9,8 +9,8 @@ n = 3 ;
 m = pow2(n) ;
 A = randn(m,m) +randn(m,m).*1i ;
 
-offset = 3 ;
-logging = 1 ;
+offset = 0 ;
+logging = true ;
 compr_type = 'cutoff' ;%'percentage'; 
 compr_val = 1e-8 ;
 circuit_sim = true ;
