@@ -237,13 +237,13 @@ function [ circuit, info ] = GenerateSingleControlQCircuit3(Varphi, Varphi2, chi
         circuit_U_R = false ;
     end
     if iscomplex
-        [circuit_U_R, info_subcircuit] = UniformRotation( circuit_U_R, 'RZ', Theta(pow2(n),:), int32((n+2):(2*n+1)), int32(0), logging, circuit_sim ) ; 
+        [circuit_U_R, info_subcircuit] = UniformRotation( circuit_U_R, 'RZ', Theta(pow2(n),:), int32((n+2):(2*n+1)), int32(0), logging, circuit_sim, n+1 ) ; 
         if logging
             nRZ = nRZ + info_subcircuit.nG ;
             nCNOT = nCNOT + info_subcircuit.nCNOT ; 
         end
     end
-    [circuit_U_R, info_subcircuit] = UniformRotation( circuit_U_R, 'RY', Varphi(1,:), int32((n+2):(2*n+1)), int32(0), logging, circuit_sim ) ; 
+    [circuit_U_R, info_subcircuit] = UniformRotation( circuit_U_R, 'RY', Varphi(1,:), int32((n+2):(2*n+1)), int32(0), logging, circuit_sim, n+1 ) ; 
     if logging
         nRY = nRY + info_subcircuit.nG ;
         nCNOT = nCNOT + info_subcircuit.nCNOT ; 
@@ -252,28 +252,28 @@ function [ circuit, info ] = GenerateSingleControlQCircuit3(Varphi, Varphi2, chi
     for k = 1:n-1
         para_row_index = pow2(k):pow2(k+1)-1;
         % Recursion of UniformRotation()
-        [circuit_U_R, info_subcircuit ] = UniformRotation( circuit_U_R, 'RY', Varphi(para_row_index,:)', int32(0:(n-1)), int32(k), logging, circuit_sim ) ; 
+        [circuit_U_R, info_subcircuit ] = UniformRotation( circuit_U_R, 'RY', Varphi(para_row_index,:)', int32(0:(n-1)), int32(k), logging, circuit_sim, n+1 ) ; 
         if logging
             nRY = nRY + info_subcircuit.nG ;
             nCNOT = nCNOT + info_subcircuit.nCNOT ; 
         end
     end
     if iscomplex
-        [circuit_U_R, info_subcircuit] = UniformRotation( circuit_U_R, 'RZ', Theta(1,:), int32((n+2):(2*n+1)), int32(0), logging, circuit_sim ) ; 
+        [circuit_U_R, info_subcircuit] = UniformRotation( circuit_U_R, 'RZ', Theta(1,:), int32((n+2):(2*n+1)), int32(0), logging, circuit_sim, n+1 ) ; 
         if logging
             nRZ = nRZ + info_subcircuit.nG ;
             nCNOT = nCNOT + info_subcircuit.nCNOT ; 
         end
         for k = 1:n-1
             para_row_index = pow2(k):pow2(k+1)-1;
-            [circuit_U_R, info_subcircuit ] = UniformRotation( circuit_U_R, 'RZ', Theta(para_row_index,:)', int32(0:(n-1)), int32(k), logging, circuit_sim ) ; 
+            [circuit_U_R, info_subcircuit ] = UniformRotation( circuit_U_R, 'RZ', Theta(para_row_index,:)', int32(0:(n-1)), int32(k), logging, circuit_sim, n+1 ) ; 
             if logging
                 nRZ = nRZ + info_subcircuit.nG ;
                 nCNOT = nCNOT + info_subcircuit.nCNOT ; 
             end
         end
     end
-    [circuit_U_R, info_subcircuit ] = UniformRotation( circuit_U_R, 'RY', chi_R',  int32((n+2):(2*n+1)), int32(n), logging, circuit_sim ) ;
+    [circuit_U_R, info_subcircuit ] = UniformRotation( circuit_U_R, 'RY', chi_R',  int32((n+2):(2*n+1)), int32(n), logging, circuit_sim, n+1 ) ;
     if logging
         nRY = nRY + info_subcircuit.nG ;
         nCNOT = nCNOT + info_subcircuit.nCNOT ; 
@@ -285,7 +285,7 @@ function [ circuit, info ] = GenerateSingleControlQCircuit3(Varphi, Varphi2, chi
     else
         circuit_U_L = false ;
     end
-    [circuit_U_L, info_subcircuit] = UniformRotation( circuit_U_L, 'RY', Varphi2(1,:), int32((n+2):(2*n+1)), int32(0), logging, circuit_sim ) ; 
+    [circuit_U_L, info_subcircuit] = UniformRotation( circuit_U_L, 'RY', Varphi2(1,:), int32((n+2):(2*n+1)), int32(0), logging, circuit_sim, n+1 ) ; 
     if logging
         nRY = nRY + info_subcircuit.nG ;
         nCNOT = nCNOT + info_subcircuit.nCNOT ; 
@@ -293,13 +293,13 @@ function [ circuit, info ] = GenerateSingleControlQCircuit3(Varphi, Varphi2, chi
     for k = 1:n-1
         para_row_index = pow2(k):pow2(k+1)-1;
         % Recursion of UniformRotation()
-        [circuit_U_L, info_subcircuit ] = UniformRotation( circuit_U_L, 'RY', Varphi2(para_row_index,:)', int32(0:(n-1)), int32(k), logging, circuit_sim ) ; 
+        [circuit_U_L, info_subcircuit ] = UniformRotation( circuit_U_L, 'RY', Varphi2(para_row_index,:)', int32(0:(n-1)), int32(k), logging, circuit_sim, n+1 ) ; 
         if logging
             nRY = nRY + info_subcircuit.nG ;
             nCNOT = nCNOT + info_subcircuit.nCNOT ; 
         end
     end
-    [circuit_U_L, info_subcircuit ] = UniformRotation( circuit_U_L, 'RY', chi_L',  int32((n+2):(2*n+1)), int32(n+1), logging, circuit_sim ) ;
+    [circuit_U_L, info_subcircuit ] = UniformRotation( circuit_U_L, 'RY', chi_L',  int32((n+2):(2*n+1)), int32(n+1), logging, circuit_sim, n+1 ) ;
     if logging
         nRY = nRY + info_subcircuit.nG ;
         nCNOT = nCNOT + info_subcircuit.nCNOT ; 
@@ -327,7 +327,7 @@ function [ circuit, info ] = GenerateSingleControlQCircuit3(Varphi, Varphi2, chi
 end % end of GenerateSingleControlQCircuit3
 
 
-function [ circuit, info, parity_check ] = UniformRotation( circuit, ctrl_type, para_seq, ctrl_index, targ_index, logging, circuit_sim )
+function [ circuit, info, parity_check ] = UniformRotation( circuit, ctrl_type, para_seq, ctrl_index, targ_index, logging, circuit_sim, n )
 % Input:    circuit     --  generated by qclab.QCircuit; 
 %           ctrl_type   --  'RY' for Rotation-Y/ 'RZ' for Rotation-Z 
 %           para_seq    --  parameter generated by Walsh-Hadamard transform 
@@ -339,7 +339,6 @@ function [ circuit, info, parity_check ] = UniformRotation( circuit, ctrl_type, 
 %           info        --  struct containing some info on compression algorithm and circuit
 
     n_count = log(size(para_seq, 2)) / log(2) ;
-    n = (circuit.nbQubits - 1) / 2 ;
     if strcmp( ctrl_type, 'RY' )
         G = @qclab.qgates.RotationY ;
     elseif strcmp( ctrl_type, 'RZ' )
