@@ -3,6 +3,12 @@ Single Ancilla Block-Encoding (SIABLE) and Binary Tree Block-Encoding (BITBLE): 
 
 These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab), and SIABLE is also bulit on top of [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition).
 
+| function      | normalization factor | Decoupled multiplexed rotations    |
+| -----------   | -----------          | -----------                        |
+| `siable.m`    | $\Vert A\Vert_2$     | permutative multiplexed rotations  |
+| `bitble.m`    | $\Vert A\Vert_F$     | recursive multiplexed rotations    |
+| `bitble2.m`   | $\Vert A\Vert_F$     | permutative multiplexed rotations  |
+| `bitble3.m`   | $S_p(A)$             | recursive multiplexed rotations    |
 
 ## 1. Single Ancilla Block-Encoding (SIABLE) - MATLAB Implementation ##
 
@@ -90,15 +96,6 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
 In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/bitble-qclab):
 
 Add `QCLAB` files and `bitble.m` (or `bitble2.m` or `bitble3.m`) into your MATLAB path.
-
-
-| function      | normalization factor | Decoupled multiplexed rotations    |
-| -----------   | -----------          | -----------                        |
-| `siable.m`    | $\Vert A\Vert_2$     | permutative multiplexed rotations  |
-| `bitble.m`    | $\Vert A\Vert_F$     | recursive multiplexed rotations    |
-| `bitble2.m`   | $\Vert A\Vert_F$     | permutative multiplexed rotations  |
-| `bitble3.m`   | $S_p(A)$             | recursive multiplexed rotations    |
-
 
 BITBLE can be run for a target matrix `A` as either:
  ```
