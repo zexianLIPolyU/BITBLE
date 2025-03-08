@@ -106,10 +106,10 @@ run("test_bitble.m")
  ```
 or
  ```
-clc ; clear ; close all ;
+clc;clear;close all;
 addpath( 'QCLAB' ) ;
-N = pow2(3);
-A = randn(N, N);
+N = pow2(3) ;
+A = randn(N, N) ;
 logging = true ; % logging of this algorithm
 offset = 0 ;     % Qubit offset of this quantum circuit
 circuit_sim = true ; % true/false, if false info will only compute the circuit's parameters; if true info will also simulate the quantum circuit
@@ -117,7 +117,6 @@ circuit_sim = true ; % true/false, if false info will only compute the circuit's
 % [circuit, subnormalization_factor, info] = bitble( A, 'percentage', 80, logging, offset, circuit_sim ) ;
 circuit.draw() ;
 info
-
 ```
 The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolute value, the second option
 (`'percentage'`) applies an 80% compression and only retains the 20% largest coefficients. The `'percentage'` and `logging` options are only available in the MATLAB version of BITBLE and SIABLE.
