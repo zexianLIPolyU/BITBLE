@@ -93,7 +93,7 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
 ## 2. Binary Tree data structure state preparation - MATLAB Implementation ##
 
 In order to run the MATLAB implementation of [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation):
-1. Down [state_preparation]([https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/bitble-qclab](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation)) repository.
+1. Down [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation) repository.
 2. Unzip it and add `QCLAB` and `state_preparation`  files into your MATLAB path.
 3. State preparation can be run by
      ```
