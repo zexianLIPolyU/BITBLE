@@ -6,7 +6,7 @@ Single Ancilla Block-Encoding (SIABLE) and Binary Tree Block-Encoding (BITBLE): 
 | `siable.m`    | $\Vert A\Vert_2$     | permutative multiplexed rotations  |  1                                                  |
 | `bitble.m`    | $\Vert A\Vert_F$     | recursive multiplexed rotations    |  n                                                  |
 | `bitble2.m`   | $\Vert A\Vert_F$     | permutative multiplexed rotations  |  n                                                  |
-| `bitble3.m`   | $\mu_p(A^T)=\sqrt{\max_j\Vert A_{\cdot,j}\Vert_{2p}^{2p}\cdot \max_i\Vert A_{i,\cdot}\Vert_{2(1-p)}^{2(1-p)}}$  | recursive multiplexed rotations    |  n+2 |
+| `bitble3.m`   | $\mu_p(A^T)=\sqrt{\max_{i,j}\Vert A_{\cdot,j}\Vert_{2p}^{2p}\cdot \Vert A_{i,\cdot}\Vert_{2(1-p)}^{2(1-p)}}$  | recursive multiplexed rotations    |  n+2 |
 
 These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab) repository in MATLAB, and SIABLE is also bulit on top of [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition).
 Python implementation can be found in [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/ChunlinYangHEU/BITBLE_python).
