@@ -11,8 +11,16 @@ Single Ancilla Block-Encoding (SIABLE) and Binary Tree Block-Encoding (BITBLE): 
 These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab) repository in MATLAB, and SIABLE is also bulit on top of [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition).
 Python implementation can be found in [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/ChunlinYangHEU/BITBLE_python).
 
+## 1. Binary Tree data structure state preparation - MATLAB Implementation ##
 
-## 1. Single Ancilla Block-Encoding (SIABLE) - MATLAB Implementation ##
+In order to run the MATLAB implementation of [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation):
+1. Down [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation) repository.
+2. Unzip it and add `QCLAB` and `state_preparation`  files into your MATLAB path.
+3. State preparation can be run by
+     ```
+     run("test_state_preparation.m")
+     ```
+## 2. Single Ancilla Block-Encoding (SIABLE) - MATLAB Implementation ##
 
 SIABLE have optimal normalization factor $\Vert A\Vert_2$ with single ancilla qubit.
 
@@ -90,15 +98,6 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
     circuit.draw();
     ```
 
-## 2. Binary Tree data structure state preparation - MATLAB Implementation ##
-
-In order to run the MATLAB implementation of [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation):
-1. Down [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation) repository.
-2. Unzip it and add `QCLAB` and `state_preparation`  files into your MATLAB path.
-3. State preparation can be run by
-     ```
-     run("test_state_preparation.m")
-     ```
 ## 3. Binary Tree Block-Encoding (BITBLE) - MATLAB Implementation ##
 
 In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/bitble-qclab):
