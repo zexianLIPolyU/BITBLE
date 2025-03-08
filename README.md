@@ -102,6 +102,10 @@ In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianL
 
 BITBLE can be run for a target matrix `A` as either:
  ```
+run("test_bitble.m")
+ ```
+or
+ ```
 N = pow2(3);
 A = randn(N, N);
 logging = true ; % logging of this algorithm
