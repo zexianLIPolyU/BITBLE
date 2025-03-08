@@ -67,7 +67,7 @@ The first option (`'cutoff'`) ignores coefficients smaller than `1e-4` in absolu
 
 ## 3. Binary Tree Block-Encoding (BITBLE) - PYTHON Implementation ##
 
-Link: [BITBLE_python](https://github.com/zexianLIPolyU/BITBLE_python).
+Link: [https://github.com/zexianLIPolyU/BITBLE_python](https://github.com/ChunlinYangHEU/BITBLE_python).
 
 
 
