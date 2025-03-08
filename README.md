@@ -94,9 +94,9 @@ Add `QCLAB` files and `bitble.m` (or `bitble2.m` or `bitble3.m`) into your MATLA
 
 | function      | normalization factor | Decoupled multiplexed rotations    |
 | -----------   | -----------          | -----------                        |
-| `bitble.m`    | $\Vert A\Vert_F$     |recursive multiplexed rotations     |
-| `bitble2.m`   | $\Vert A\Vert_F$     |permutative multiplexed rotations   |
-| `bitble3.m`   | $S_q(A)$             |recursive multiplexed rotations     |
+| `bitble.m`    | $\Vert A\Vert_F$     | recursive multiplexed rotations    |
+| `bitble2.m`   | $\Vert A\Vert_F$     | permutative multiplexed rotations  |
+| `bitble3.m`   | $S_p(A)$             | recursive multiplexed rotations    |
 
 
 BITBLE can be run for a target matrix `A` as either:
