@@ -42,7 +42,7 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
         1.0000
     ```
     then, `csd()` has been compilation.
-4. After compilation, SIABLE can be test: 
+4. After compilation, SIABLE can be tested by the following commands: 
     
      ```
     cd('..');
