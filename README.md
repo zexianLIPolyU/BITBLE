@@ -18,7 +18,7 @@ SIABLE have optimal normalization factor $\Vert A\Vert_2$ with single ancilla qu
 
 In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab):
 
-1. Download [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab)repositories.
+1. Download [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab) repositories.
 2. Unzip it and add `QCLAB` and `iwoodsawyer-csd-a23bac9` files and `siable.m` into your MATLAB path.
 3. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9` (The **Windows** version of MATLAB can compile more smoothly).
     ```
