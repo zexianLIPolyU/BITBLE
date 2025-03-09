@@ -119,6 +119,9 @@ In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianL
     run("test_bitble.m")
      ```
     or
+
+    - `compr_type = 'cutoff'` and `compr_val = 1e-8` ignores coefficients smaller than `1e-8` in absolute value; `compr_type = 'percentage’`；
+    - `compr_val = 80` applies an `80%` compression and only retains the `20%` largest coefficients.
      ```
     clc;clear;close all;
     addpath( 'QCLAB' ) ;
@@ -132,8 +135,7 @@ In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianL
     circuit.draw() ;
     info
     ```
-    - `compr_type = 'cutoff'` and `compr_val = 1e-8` ignores coefficients smaller than `1e-8` in absolute value; `compr_type = 'percentage’`；
-    - `compr_val = 80` applies an `80%` compression and only retains the `20%` largest coefficients.
+
     
     Output (The **Mac** system will display the content without any dislocation.):
     ```
