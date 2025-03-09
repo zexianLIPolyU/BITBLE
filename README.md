@@ -56,7 +56,7 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
         1.0000
     ```
     then, `csd()` has been compilation.
-5. After compilation, SIABLE can be tested by the following commands: 
+5. After compilation, SIABLE can be tested by the one of two commands: 
     
      ```
     cd('..')
@@ -74,7 +74,7 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
     n = 3 ;
     A = randn(pow2(n),pow2(n)) + 1j .* randn(pow2(n),pow2(n)) ;
     ```
-    `siable.m` can be run to encode matrix `A`. Option (`'cutoff'`) ignores coefficients smaller than `1e-8` in absolute value. Option (`'percentage'`) applies an `80%` compression and only retains the `20%` largest coefficients.
+    `siable.m` can be run to encode matrix `A`.  `compr_type = 'cutoff'` and `compr_val = 1e-8` ignores coefficients smaller than `1e-8` in absolute value; `compr_type = 'percentage’`  and `compr_val = 80` applies an `80%` compression and only retains the `20%` largest coefficients.
     ```
     fprintf("\nSIABLE Block Encoding");
     fprintf("\n------------------------------------------------------------ \n");
@@ -89,7 +89,7 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
     % offset = 0 ;
     % logging = true ;
     % compr_type = 'percentage'; 
-    % compr_val = 1e-8 ;
+    % compr_val = 80 ;
     % circuit_sim = true ;
     % [circuit, normalization_factor, info] = siable( A, compr_type, compr_val, logging, offset, circuit_sim ) ;
     ```
