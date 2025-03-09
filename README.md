@@ -74,8 +74,7 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
     n = 3 ;
     A = randn(pow2(n),pow2(n)) + 1j .* randn(pow2(n),pow2(n)) ;
     ```
-    The first option (`'cutoff'`) ignores coefficients smaller than `1e-8` in absolute value,
-    the second option (`'percentage'`) applies an `80%` compression and only retains the `20%` largest coefficients.
+    `siable.m` can be run to encode matrix `A`. Option (`'cutoff'`) ignores coefficients smaller than `1e-8` in absolute value. Option (`'percentage'`) applies an `80%` compression and only retains the `20%` largest coefficients.
     ```
     fprintf("\nSIABLE Block Encoding");
     fprintf("\n------------------------------------------------------------ \n");
