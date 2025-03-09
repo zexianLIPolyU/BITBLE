@@ -15,7 +15,7 @@ Python implementation of `bitble.m` can be found in [https://github.com/ChunlinY
 
 In order to run the MATLAB implementation of [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation):
 1. Down [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation) repository.
-2. Unzip it and add `QCLAB` and `state_preparation`  files into your MATLAB path.
+2. Unzip it and add `state_preparation`  files into your MATLAB path.
     ```
     cd("state_preparation")
     ```
