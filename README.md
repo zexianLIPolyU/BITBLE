@@ -16,6 +16,9 @@ Python implementation of `bitble.m` can be found in [https://github.com/ChunlinY
 In order to run the MATLAB implementation of [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation):
 1. Down [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation) repository.
 2. Unzip it and add `QCLAB` and `state_preparation`  files into your MATLAB path.
+    ```
+    cd("state_preparation")
+    ```
 3. State preparation can be run by
      ```
      run("test_state_preparation.m")
@@ -28,15 +31,18 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
 
 1. Download [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab) repository.
 2. Unzip it and add `QCLAB` and `iwoodsawyer-csd-a23bac9` files and `siable.m` into your MATLAB path.
+    ```
+    cd("siable-qclab")
+    ```
 3. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9` (The **Windows** version of MATLAB can compile conveniently).
     ```
-    cd("iwoodsawyer-csd-a23bac9");
+    cd("iwoodsawyer-csd-a23bac9")
     ```
     ```
-    run("make_csd.m");
+    run("make_csd.m")
     ```
     ```
-    run("test_csd.m");
+    run("test_csd.m")
     ```
     If the screen output:
     ```
@@ -50,11 +56,11 @@ In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianL
         1.0000
     ```
     then, `csd()` has been compilation.
-4. After compilation, SIABLE can be tested by the following commands: 
+5. After compilation, SIABLE can be tested by the following commands: 
     
      ```
-    cd('..');
-    run("test_siable.m");
+    cd('..')
+    run("test_siable.m")
      ```
     or 
     
@@ -104,6 +110,9 @@ In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianL
 
 1. Down [BITBLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/bitble-qclab) repository.
 2. Unzip it and add `QCLAB` files and `bitble.m` (or `bitble2.m` or `bitble3.m`) into your MATLAB path.
+    ```
+    cd("bitble-qclab")
+    ```
 3. BITBLE can be run for a target matrix `A` as either:
      ```
     run("test_bitble.m")
