@@ -1,5 +1,5 @@
 # Single Ancilla Block-Encoding (SIABLE) and Binary Tree Block-Encoding (BITBLE) 
-Single Ancilla Block-Encoding (SIABLE) and Binary Tree Block-Encoding (BITBLE): Two block-encoding circuits for encoding general matrices. 
+Single Ancilla Block-Encoding (SIABLE) and Binary Tree Block-Encoding (BITBLE): Two block-encoding quantum circuits for encoding general matrices. 
 
 | function      | normalization factor | Decoupled multiplexed rotations    | Ancilla qubit number for encoding $2^n\times 2^n$ matrix $A$  |
 | -----------   | -----------          | -----------                        |  -----------                                        |
