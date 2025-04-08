@@ -79,87 +79,11 @@ In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianL
     ```
     and the number of quantum gates for block-encoding can be found in `info`.
 
-## 3. Single Ancilla Block-Encoding (SIABLE) - MATLAB Implementation ##
+## 3. Single Ancilla Block-Encoding (SIABLE) ##
 
 SIABLE have optimal normalization factor $\Vert A\Vert_2$ with single ancilla qubit.
 
-In order to run the MATLAB implementation of [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab):
-
-1. Download [SIABLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/siable-qclab) repository.
-2. Unzip it and add `QCLAB` and `iwoodsawyer-csd-a23bac9` files and `siable.m` into your MATLAB path.
-    ```
-    cd("siable-qclab")
-    ```
-3. Compile `csd()` by running `make_csd.m` in the file named `iwoodsawyer-csd-a23bac9` (The **Windows** version of MATLAB can compile conveniently).
-    ```
-    cd("iwoodsawyer-csd-a23bac9")
-    ```
-    ```
-    run("make_csd.m")
-    ```
-    ```
-    run("test_csd.m")
-    ```
-    If the screen output:
-    ```
-    ans =
-    
-        1.0000
-    
-    
-    ans =
-    
-        1.0000
-    ```
-    then, `csd()` has been compilation.
-5. After compilation, SIABLE can be tested by the one of two commands: 
-    
-     ```
-    cd('..')
-    run("test_siable.m")
-     ```
-    or 
-    
-    Define a matrix `A`:
-    
-     ```
-    clc;clear;close all
-    addpath("iwoodsawyer-csd-a23bac9"); % loading csd() 
-    addpath("QCLAB");  % loading QCLAB
-
-    n = 3 ;
-    A = randn(pow2(n),pow2(n)) + 1j .* randn(pow2(n),pow2(n)) ;
-    ```
-    `siable.m` can be run to encode matrix `A`:
-    - `compr_type = 'cutoff'` and `compr_val = 1e-8` ignores coefficients smaller than `1e-8` in absolute value; `compr_type = 'percentage’`；
-    - `compr_val = 80` applies an `80%` compression and only retains the `20%` largest coefficients.
-    ```
-    fprintf("\nSIABLE Block Encoding");
-    fprintf("\n------------------------------------------------------------ \n");
-    fprintf("parameter computing... \n") ;
-    
-    offset = 0 ;
-    logging = true ;
-    compr_type = 'cutoff' ;%'percentage'; 
-    compr_val = 1e-8 ;
-    circuit_sim = true ;
-    [circuit, normalization_factor, info] = siable( A, compr_type, compr_val, logging, offset, circuit_sim ) ;
-    % offset = 0 ;
-    % logging = true ;
-    % compr_type = 'percentage'; 
-    % compr_val = 80 ;
-    % circuit_sim = true ;
-    % [circuit, normalization_factor, info] = siable( A, compr_type, compr_val, logging, offset, circuit_sim ) ;
-    ```
-    Show the simulation result:
-    ```
-    fprintf("1.0001 * 2-norm of A = %f \n",1.0001 *norm(A,2)) ;
-    fprintf("normalization_factor = %f \n",normalization_factor) ;
-    M = circuit.matrix;
-    fprintf("norm(normalization_factor.*M(1:pow2(n),1:pow2(n))-A) = %e \n",norm(normalization_factor.*M(1:pow2(n),1:pow2(n))-A)) ;
-    if logging, info.circ; end
-    circuit.draw();
-    ```
+Coming soon.
 
 ## 4. Binary Tree Block-Encoding (BITBLE) - PYTHON Implementation ##
 
