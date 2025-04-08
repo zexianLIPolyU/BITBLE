@@ -3,7 +3,7 @@ Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE): 
 
 | Function      | Normalization Factor | Decoupled Methods                  | Ancilla Qubit Number for Encoding $2^n\times 2^n$ Matrix $A$    |
 | -----------   | -----------          | -----------                        |  -----------                                                    |
-| `siable.m`    | $\Vert A\Vert_2$     | permutative demultiplexor          |  1                                                              |
+| `siable.m`(coming)    | $\Vert A\Vert_2$     | permutative demultiplexor          |  1                                                              |
 | `bitble.m`    | $\Vert A\Vert_F$     | recursive demultiplexor            |  n                                                              |
 | `bitble2.m`   | $\Vert A\Vert_F$     | permutative demultiplexor          |  n                                                              |
 | `bitble3.m`   | $\mu_p(A^T)=\sqrt{\max_{i,j}\Vert A_{\cdot,j}\Vert_{2p}^{2p}\cdot \Vert A_{i,\cdot}\Vert_{2(1-p)}^{2(1-p)}}$  | recursive demultiplexor  |  n+2 |
