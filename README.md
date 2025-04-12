@@ -3,8 +3,11 @@ Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE): 
 These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab) repository in MATLAB, and [mindquantum](https://www.mindspore.cn/mindquantum/docs/en/r0.6/index.html)/[PyQPanda](https://github.com/OriginQ/pyQPanda-Toturial/blob/master/source/index.rst) in Python
 
 # 1. Binary Tree Block-Encoding (BITBLE)
+
+## 1.0. References and introduction ##
 Paper: https://arxiv.org/abs/2504.05624
 
+Introduction:
 | Function      | Normalization Factor | Decoupled Methods                  | Ancilla Qubit Number for Encoding $2^n\times 2^n$ Matrix $A$    |
 | -----------   | -----------          | -----------                        |  -----------                                                    |
 | `bitble.m`    | $\Vert A\Vert_F$     | recursive demultiplexor            |  n                                                              |
@@ -13,7 +16,7 @@ Paper: https://arxiv.org/abs/2504.05624
 
 
 
-## 1.1. Binary Tree data structure state preparation - MATLAB Implementation ##
+## 1.1. Binary tree data structure state preparation - MATLAB Implementation ##
 
 
 
