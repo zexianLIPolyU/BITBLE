@@ -4,7 +4,6 @@ These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumCompu
 
 # 1. Binary Tree Block-Encoding (BITBLE)
 
-## 1.0. References and introduction ##
 Paper: https://arxiv.org/abs/2504.05624
 
 Introduction:
