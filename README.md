@@ -7,6 +7,9 @@ These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumCompu
 Paper: https://arxiv.org/abs/2504.05624
 
 Introduction:
+
+BITBLE can compile a block-encoding very fast.
+
 | Function      | Normalization Factor | Decoupled Methods                  | Ancilla Qubit Number for Encoding $2^n\times 2^n$ Matrix $A$    |
 | -----------   | -----------          | -----------                        |  -----------                                                    |
 | `bitble.m`    | $\Vert A\Vert_F$     | recursive demultiplexor            |  n                                                              |
