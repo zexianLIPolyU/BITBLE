@@ -1,6 +1,6 @@
 # Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE)
 Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE): Two block-encoding quantum circuits for encoding general matrices. 
-These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab) repository in MATLAB and  Python
+These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab) repository in MATLAB, and [mindquantum](https://www.mindspore.cn/mindquantum/docs/en/r0.6/index.html)/[PyQPanda](https://github.com/OriginQ/pyQPanda-Toturial/blob/master/source/index.rst) in Python
 
 # 1. Binary Tree Block-Encoding (BITBLE)
 Paper: https://arxiv.org/abs/2504.05624
