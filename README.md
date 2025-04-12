@@ -1,17 +1,23 @@
 # Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE)
 Binary Tree Block-Encoding (BITBLE) and Single Ancilla Block-Encoding (SIABLE): Two block-encoding quantum circuits for encoding general matrices. 
 
+Binary Tree Block-Encoding (BITBLE)
+Paper: https://arxiv.org/abs/2504.05624
+
 | Function      | Normalization Factor | Decoupled Methods                  | Ancilla Qubit Number for Encoding $2^n\times 2^n$ Matrix $A$    |
 | -----------   | -----------          | -----------                        |  -----------                                                    |
 | `bitble.m`    | $\Vert A\Vert_F$     | recursive demultiplexor            |  n                                                              |
 | `bitble2.m`   | $\Vert A\Vert_F$     | permutative demultiplexor          |  n                                                              |
 | `bitble3.m`   | $\mu_p(A^T)=\sqrt{\max_{i,j}\Vert A_{\cdot,j}\Vert_{2p}^{2p}\cdot \Vert A_{i,\cdot}\Vert_{2(1-p)}^{2(1-p)}}$  | recursive demultiplexor  |  n+2 |
 
+Single Ancilla Block-Encoding (SIABLE):
+On coming
+
 These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab) repository in MATLAB, and SIABLE is also bulit on top of [cosine-sine decomposition](https://www.mathworks.com/matlabcentral/fileexchange/50402-cosine-sine-decomposition).
 
 ## 1. Binary Tree data structure state preparation - MATLAB Implementation ##
 
-Paper: https://arxiv.org/abs/2504.05624
+
 
 In order to run the MATLAB implementation of [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation):
 1. Down [state_preparation](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/state_preparation) repository.
