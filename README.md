@@ -13,7 +13,7 @@ Paper: https://arxiv.org/abs/2504.05624
 
 
 
-## 1. Binary Tree data structure state preparation - MATLAB Implementation ##
+## 1.1. Binary Tree data structure state preparation - MATLAB Implementation ##
 
 
 
@@ -29,7 +29,7 @@ In order to run the MATLAB implementation of [state_preparation](https://github.
      ```
 
 
-## 2. Binary Tree Block-Encoding (BITBLE) - MATLAB Implementation ##
+## 1.2. Binary Tree Block-Encoding (BITBLE) - MATLAB Implementation ##
 
 In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/bitble-qclab):
 
@@ -85,27 +85,30 @@ In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianL
     and the number of quantum gates for block-encoding can be found in `info`.
 
 
+
+## 1.3. Binary Tree Block-Encoding (BITBLE) - PYTHON Implementation ##
+
+Link: [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/ChunlinYangHEU/BITBLE_python) .
+
 -----------
 
 # 2. Single Ancilla Block-Encoding (SIABLE):
 Coming
 
 
-
-# Implementation
-
-
-
-
-## 3. Single Ancilla Block-Encoding (SIABLE) ##
-
+## 2.1. Single Ancilla Block-Encoding (SIABLE) ##
 SIABLE have optimal normalization factor $\Vert A\Vert_2$ with single ancilla qubit.
 
 Coming soon.
 
-## 4. Binary Tree Block-Encoding (BITBLE) - PYTHON Implementation ##
 
-Link: [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/ChunlinYangHEU/BITBLE_python) .
+
+
+
+
+
+
+
 
 
 
