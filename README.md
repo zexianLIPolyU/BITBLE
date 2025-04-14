@@ -105,8 +105,8 @@ Link: [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/Chunl
     ```
 
 Time of compiling:
-    | $n$ | \texttt{BITBLE}$^{1}$  | \texttt{BITBLE}$^{2}$ | \texttt{BITBLE}$^{3}$ | \texttt{FABLE}~\cite{9951292} | Qiskit |
-    | -----------   | -----------          | -----------                        |  -----------                                                    |
+    | $n$ |  BITBLE1  | BITBLE2 | BITBLE3 | FABLE | Qiskit |
+    | --- | --------- | ------- | ------- | ----- | ------ |
     ｜   5 ｜ 0.017 ｜ 0.010｜ 0.014 ｜ \textbf{0.008} ｜ 6.97 ｜
     ｜   6 ｜ 0.031 ｜ 0.035｜ 0.054 ｜ \textbf{0.028} ｜ 46.3 ｜
      ｜   7 ｜ \textbf{0.104}｜ 0.113 ｜ 0.211 ｜ 0.112 ｜ 221.2 ｜
@@ -115,8 +115,8 @@ Time of compiling:
      ｜   10 ｜ \textbf{7.137} ｜ 8.368 ｜ 15.21 ｜ 8.604 ｜ 7262 ｜
      ｜   11 ｜ \textbf{29.35} ｜ 35.20 ｜ 65.04 ｜ 36.49 ｜ - ｜ 
      ｜   12 ｜ \textbf{120.4} ｜ 147.1 ｜ 269.5 ｜ 148.7 ｜ - ｜
-     ｜   13 ｜ \textbf{498.6} ｜ 623.6 ｜ 1125 ｜ 625.5 ｜
-     ｜   14 ｜ \textbf{2103} ｜ 3119 ｜ 5342 ｜ 2831 ｜
+     ｜   13 ｜ \textbf{498.6} ｜ 623.6 ｜ 1125 ｜ 625.5 ｜  - ｜
+     ｜   14 ｜ \textbf{2103} ｜ 3119 ｜ 5342 ｜ 2831 ｜ - ｜
 
 -----------
 
