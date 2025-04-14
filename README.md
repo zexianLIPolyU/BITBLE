@@ -95,7 +95,7 @@ In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianL
 
 Link: [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/ChunlinYangHEU/BITBLE_python) .
 
-## 1.4. Performance ##
+## 1.4. Performance Comparsion ##
 
 Setting of ``bitble`` and ``fable`` programe:
 
