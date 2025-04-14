@@ -108,7 +108,7 @@ Setting of ``bitble`` and ``fable`` programe:
 
 Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parameters and CNOT logical on a 32GB RAM wins computer):
 
-|  n            | `bitble1` | `bitble2` |`bitble3`| [`fable`](https://github.com/QuantumComputingLab/fable)   |`Qiskit`|
+|  n            | `bitble1` | `bitble2` |`bitble3`| [`fable`]   |`Qiskit`|
 |---------------|-----------|-----------|---------|-----------|--------|
 | 5             | 0.017     | 0.010     | 0.014   | **0.008** | 6.97   |
 | 6             | 0.031     | 0.035     | 0.054   | **0.028** | 46.3   |
@@ -124,6 +124,7 @@ Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parame
 where  `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis in our experiment.
 
 References:
+[https://github.com/QuantumComputingLab/fable](https://github.com/QuantumComputingLab/fable)
 [https://docs.quantum.ibm.com/api/qiskit/synthesis](https://docs.quantum.ibm.com/api/qiskit/synthesis).
 
 -----------
