@@ -107,6 +107,7 @@ Setting of ``bitble`` and ``fable`` programe:
     ```
 
 Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parameters and CNOT logical):
+(32GB RAM wins computer)
 
 |  n            | BITBLE1   | BITBLE2   | BITBLE3 | FABLE     | Qiskit |
 |---------------|-----------|-----------|---------|-----------|--------|
