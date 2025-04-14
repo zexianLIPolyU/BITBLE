@@ -121,7 +121,7 @@ Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parame
 | 13            | **498.6** | 623.6     | 1125    | 625.5     | -      |
 | 14            | **2103**  | 3119      | 5342    | 2831      | -      |
 
-where `fable` in this experiment only compile the rotation's parameters, and `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis.
+In this experiment, `bitble` and `fable` only compile the rotation's parameters, and `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis.
 
 References:
 
