@@ -97,7 +97,7 @@ Link: [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/Chunl
 
 ## 1.4. Performance Comparsion ##
 
-Setting of ``bitble`` and ``fable`` programe:
+Setting of ``bitble`` and [``fable``](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/test_fable) programe:
 
     ```
     offset = 0 ;
@@ -108,7 +108,7 @@ Setting of ``bitble`` and ``fable`` programe:
 
 Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parameters and CNOT logical on a 32GB RAM wins computer):
 
-|  n            | `bitble1` | `bitble2` |`bitble3`| [`fable`](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/test_fable)   |`Qiskit`|
+|  n            | `bitble1` | `bitble2` |`bitble3`| `fable`   |`Qiskit`|
 |---------------|-----------|-----------|---------|-----------|--------|
 | 5             | 0.017     | 0.010     | 0.014   | **0.008** | 6.97   |
 | 6             | 0.031     | 0.035     | 0.054   | **0.028** | 46.3   |
@@ -121,7 +121,7 @@ Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parame
 | 13            | **498.6** | 623.6     | 1125    | 625.5     | -      |
 | 14            | **2103**  | 3119      | 5342    | 2831      | -      |
 
-where  `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis in our experiment.
+where `fable` in this experiment only compile the rotation's parameters, and `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis.
 
 References:
 [https://github.com/QuantumComputingLab/fable](https://github.com/QuantumComputingLab/fable)
