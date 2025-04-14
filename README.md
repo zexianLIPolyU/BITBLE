@@ -105,6 +105,7 @@ Setting of ``bitble`` and [``fable``](https://github.com/zexianLIPolyU/BITBLE-SI
     compr_type = 'cutoff' ;
     circuit_sim = false ;
     ```
+In this experiment, `bitble` and `fable` only compile the rotation's parameters, and `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis.
 
 Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parameters and CNOT logical on a 32GB RAM wins computer):
 
@@ -121,7 +122,6 @@ Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parame
 | 13            | **498.6** | 623.6     | 1125    | 625.5     | -      |
 | 14            | **2103**  | 3119      | 5342    | 2831      | -      |
 
-In this experiment, `bitble` and `fable` only compile the rotation's parameters, and `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis.
 
 References:
 
