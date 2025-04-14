@@ -97,6 +97,8 @@ Link: [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/Chunl
 
 ## 1.4. Performance ##
 
+Setting of programe:
+
     ```
     offset = 0 ;
     logging = true ;
