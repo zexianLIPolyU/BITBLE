@@ -97,7 +97,7 @@ Link: [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/Chunl
 
 ## 1.4. Performance ##
 
-Setting of `bitble' and `fable' programe:
+Setting of ``bitble`` and ``fable`` programe:
 
     ```
     offset = 0 ;
