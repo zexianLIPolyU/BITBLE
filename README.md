@@ -125,6 +125,9 @@ where `fable` in this experiment only compile the rotation's parameters, and `Qi
 
 References:
 
+-BITBLE:
+[https://github.com/zexianLIPolyU/BITBLE-SIABLE_MATLAB](https://github.com/zexianLIPolyU/BITBLE-SIABLE_MATLAB)
+
 -FABLE:
 [https://github.com/QuantumComputingLab/fable](https://github.com/QuantumComputingLab/fable)
 
