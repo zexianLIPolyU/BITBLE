@@ -102,7 +102,7 @@ Setting of ``bitble`` and ``fable`` programe:
     ```
     offset = 0 ;
     logging = true ;
-    compr_type = 'cutoff' ;%'percentage'; 
+    compr_type = 'cutoff' ;
     circuit_sim = false ;
     ```
 
