@@ -104,7 +104,7 @@ Link: [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/Chunl
     circuit_sim = false ;
     ```
 
-Time of compiling:
+Time of compiling random matrices (compute the single parameters and CNOT logical):
 
 |  n            | BITBLE1   | BITBLE2   | BITBLE3 | FABLE     | Qiskit |
 |---------------|-----------|-----------|---------|-----------|--------|
