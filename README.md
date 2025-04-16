@@ -106,7 +106,7 @@ Setting of ``bitble`` and [``fable``](https://github.com/zexianLIPolyU/BITBLE-SI
     circuit_sim = false ;
     ```
 
-Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parameters and CNOT logical on a 32GB RAM wins computer):
+### Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parameters and CNOT logical on a 32GB RAM wins computer):
 
 |  n            | `bitble1` | `bitble2` |`bitble3`| [`fable`](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/test_fable)   |`Qiskit`|
 |---------------|-----------|-----------|---------|-----------|--------|
@@ -121,11 +121,11 @@ Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parame
 | 13            | **498.6** | 623.6     | 1125    | 625.5     | -      |
 | 14            | **2103**  | 3119      | 5342    | 2831      | -      |
 
-CNOT size's merit of encoding `Pepper` imgae (CNOT counts $\times$ normalization factor):
+In this experiment, `bitble` and `fable` only compile the rotation's parameters, and `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis.
+
+### CNOT size's merit of encoding `Pepper` imgae (CNOT counts $\times$ normalization factor):
 
 ![CNOT merit of encoding `Pepper` imgae](figs/fig_peppers.svg)
-
-In this experiment, `bitble` and `fable` only compile the rotation's parameters, and `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis.
 
 References:
 
