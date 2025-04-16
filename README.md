@@ -123,7 +123,7 @@ Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parame
 
 CNOT merit of encoding `Pepper` imgae (CNOT counts $\times$ normalization factor):
 
-![CNOT merit of encoding `Pepper` imgae](figs/fig_peppers.pdf)
+![CNOT merit of encoding `Pepper` imgae](figs/fig_peppers.svg)
 
 In this experiment, `bitble` and `fable` only compile the rotation's parameters, and `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis.
 
