@@ -121,7 +121,7 @@ Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parame
 | 13            | **498.6** | 623.6     | 1125    | 625.5     | -      |
 | 14            | **2103**  | 3119      | 5342    | 2831      | -      |
 
-CNOT merit of encoding `Pepper` imgae (CNOT counts $\times$ normalization factor):
+CNOT size's merit of encoding `Pepper` imgae (CNOT counts $\times$ normalization factor):
 
 ![CNOT merit of encoding `Pepper` imgae](figs/fig_peppers.svg)
 
