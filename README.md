@@ -123,7 +123,7 @@ Setting of ``bitble`` and [``fable``](https://github.com/zexianLIPolyU/BITBLE-SI
 
 In this experiment, `bitble` and `fable` only compile the rotation's parameters, and `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis.
 
-### CNOT's size metric of encoding `Peppers.png` imgae (CNOT's size metric $=$ CNOT counts $\times$ normalization factor):
+### CNOT's size metric of encoding ''Peppers'' imgae (CNOT's size metric $=$ CNOT counts $\times$ normalization factor):
 
 ![CNOT's Size Metric of Encoding `Peppers` Image](figs/fig_peppers.svg)
 
