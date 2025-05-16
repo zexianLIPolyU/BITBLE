@@ -2,10 +2,8 @@
 %% L. Heisenberg Hamiltonians
 
 clc;clear; close all
-addpath( "Examples");
-addpath( "QCLLB" ) ;
 addpath( "bitble-qclab" ) ;
-% load("record_Laplace.mat") ;
+addpath( "test_fable" ) ;
 
 offset = 0 ;
 logging = 1 ;
