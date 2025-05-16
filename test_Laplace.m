@@ -14,7 +14,6 @@ p = 0.5 ;
 
 
 
-
 %% loading unitary for Qiskit
 
 Laplace_mat = struct() ;
@@ -474,7 +473,7 @@ end
 %% Plot 1D Non-periodic
 
 
-clc;clear; close all;
+% clc;clear; close all;
 load("record_Laplace.mat") ;
 load("Laplace_mat.mat") ;
 
@@ -482,172 +481,124 @@ MarkerSize1 = 8 ;
 MarkerSize2 = 6 ;
 LineWidth = 0.5 ;
 
-index = 4;
-% index = 1 -- 1D non-periodic; index = 2 -- 1D periodic; index = 3 -- 2D non-periodic; index = 4 -- 2D periodic; 
 
-if index == 3 || index == 4 
-    x = {[1,1], [1,2],[2,1],[2,2],[3,1],[1,3],[2,3],[3,2],[4,1],[1,4],[3,3],[3,4],[4,3]};
-    x_labels = cellfun(@(c) sprintf('(%d, %d)', c(1), c(2)), x, 'UniformOutput', false);
-    len = length(x) ;
-else
-    len = 6 ;
-end
-
-fable_nCNOT_metric = zeros(1,len) ;
-fable_nG_metric = zeros(1,len) ;
-fable_time = zeros(1,len) ;
-bitble_nCNOT_metric = zeros(1,len) ;
-bitble_nG_metric = zeros(1,len) ;
-bitble_time = zeros(1,len) ;
-bitble2_nCNOT_metric = zeros(1,len) ;
-bitble2_nG_metric = zeros(1,len) ;
-bitble2_time = zeros(1,len) ;
-bitble3_nCNOT_metric = zeros(1,len) ;
-bitble3_nG_metric = zeros(1,len) ;
-bitble3_time = zeros(1,len) ;
-if index == 1
-    Qiskit_nCNOT_metric = [15, 83, 379, 1579, 6635, 26795] ;
-    Qiskit_nG_metric = [11, 62, 308, 1312, 5610, 22827] ;
-    for i = 1 : len
-        Qiskit_nCNOT_metric(i) = Qiskit_nCNOT_metric(i) .* Laplace_mat(i).normalization_factor ;
-        Qiskit_nG_metric(i) = Qiskit_nG_metric(i) .* Laplace_mat(i).normalization_factor ;
+for index = 1:4
+    % index = 1 -- 1D non-periodic; index = 2 -- 1D periodic; index = 3 -- 2D non-periodic; index = 4 -- 2D periodic; 
+    
+    if index == 3 || index == 4 
+        x = {[1,1], [1,2],[2,1],[2,2],[3,1],[1,3],[2,3],[3,2],[4,1],[1,4],[3,3],[3,4],[4,3]};
+        x_labels = cellfun(@(c) sprintf('(%d, %d)', c(1), c(2)), x, 'UniformOutput', false);
+        len = length(x) ;
+    else
+        len = 6 ;
     end
-elseif index == 2
-    Qiskit_nCNOT_metric = [15, 83, 379, 1609, 6635, 26923] ;
-    Qiskit_nG_metric = [11, 62, 310, 1346, 5609, 22827] ;
-    for i = 1 : len
-        Qiskit_nCNOT_metric(i) = Qiskit_nCNOT_metric(i) .* Laplace_mat(i).normalization_factor ;
-        Qiskit_nG_metric(i) = Qiskit_nG_metric(i) .* Laplace_mat(i).normalization_factor ;
+    
+    fable_nCNOT_metric = zeros(1,len) ;
+    fable_nG_metric = zeros(1,len) ;
+    fable_time = zeros(1,len) ;
+    bitble_nCNOT_metric = zeros(1,len) ;
+    bitble_nG_metric = zeros(1,len) ;
+    bitble_time = zeros(1,len) ;
+    bitble2_nCNOT_metric = zeros(1,len) ;
+    bitble2_nG_metric = zeros(1,len) ;
+    bitble2_time = zeros(1,len) ;
+    bitble3_nCNOT_metric = zeros(1,len) ;
+    bitble3_nG_metric = zeros(1,len) ;
+    bitble3_time = zeros(1,len) ;
+    if index == 1
+        Qiskit_nCNOT_metric = [15, 83, 379, 1579, 6635, 26795] ;
+        Qiskit_nG_metric = [11, 62, 308, 1312, 5610, 22827] ;
+        for i = 1 : len
+            Qiskit_nCNOT_metric(i) = Qiskit_nCNOT_metric(i) .* Laplace_mat(i).normalization_factor ;
+            Qiskit_nG_metric(i) = Qiskit_nG_metric(i) .* Laplace_mat(i).normalization_factor ;
+        end
+    elseif index == 2
+        Qiskit_nCNOT_metric = [15, 83, 379, 1609, 6635, 26923] ;
+        Qiskit_nG_metric = [11, 62, 310, 1346, 5609, 22827] ;
+        for i = 1 : len
+            Qiskit_nCNOT_metric(i) = Qiskit_nCNOT_metric(i) .* Laplace_mat(i).normalization_factor ;
+            Qiskit_nG_metric(i) = Qiskit_nG_metric(i) .* Laplace_mat(i).normalization_factor ;
+        end
+    elseif index == 3
+        Qiskit_nCNOT_metric = [4 ,60 ,57, 377, 315 ,322 ,1611 ,1611 ,1484, 1498 , 6571, 26923, 26923] ;
+        Qiskit_nG_metric = [2, 37, 35, 302, 237, 238, 1352, 1351, 1213, 1239, 5542, 22795, 22825] ;
+        for i = 1 : len
+            Qiskit_nCNOT_metric(i) = Qiskit_nCNOT_metric(i) .* Laplace_mat(i).normalization_factor ;
+            Qiskit_nG_metric(i) = Qiskit_nG_metric(i) .* Laplace_mat(i).normalization_factor ;
+        end
+    elseif index == 4
+        Qiskit_nCNOT_metric = [8, 83, 83, 379, 379, 379, 1611, 1611, 1611, 1609, 6635, 26923, 26923] ;
+        Qiskit_nG_metric = [4, 64, 62, 312, 306, 304, 1352, 1351, 1353, 1341, 5604, 22827, 22827] ;
+        for i = 1 : len
+            Qiskit_nCNOT_metric(i) = Qiskit_nCNOT_metric(i) .* Laplace_mat(i).normalization_factor ;
+            Qiskit_nG_metric(i) = Qiskit_nG_metric(i) .* Laplace_mat(i).normalization_factor ;
+        end
     end
-elseif index == 3
-    Qiskit_nCNOT_metric = [4 ,60 ,57, 377, 315 ,322 ,1611 ,1611 ,1484, 1498 , 6571, 26923, 26923] ;
-    Qiskit_nG_metric = [2, 37, 35, 302, 237, 238, 1352, 1351, 1213, 1239, 5542, 22795, 22825] ;
-    for i = 1 : len
-        Qiskit_nCNOT_metric(i) = Qiskit_nCNOT_metric(i) .* Laplace_mat(i).normalization_factor ;
-        Qiskit_nG_metric(i) = Qiskit_nG_metric(i) .* Laplace_mat(i).normalization_factor ;
+    
+    
+    for i = 1:len
+        fable_nCNOT_metric(i) = record_Laplace(index, i).fable_nCNOT_metric ;
+        fable_nG_metric(i) = record_Laplace(index, i).fable_nG_metric ;
+        fable_time(i) = record_Laplace(index, i).fable_time ;
+        bitble_nCNOT_metric(i) = record_Laplace(index, i).bitble_nCNOT_metric ;
+        bitble_nG_metric(i) = record_Laplace(index, i).bitble_nG_metric ;
+        bitble_time(i) = record_Laplace(index, i).bitble_time ;
+        bitble2_nCNOT_metric(i) = record_Laplace(index, i).bitble2_nCNOT_metric ;
+        bitble2_nG_metric(i) = record_Laplace(index, i).bitble2_nG_metric ;
+        bitble2_time(i) = record_Laplace(index, i).bitble2_time ;
+        bitble3_nCNOT_metric(i) = record_Laplace(index, i).bitble3_nCNOT_metric ;
+        bitble3_nG_metric(i) = record_Laplace(index, i).bitble3_nG_metric ;
+        bitble3_time(i) = record_Laplace(index, i).bitble3_time ;
     end
-elseif index == 4
-    Qiskit_nCNOT_metric = [8, 83, 83, 379, 379, 379, 1611, 1611, 1611, 1609, 6635, 26923, 26923] ;
-    Qiskit_nG_metric = [4, 64, 62, 312, 306, 304, 1352, 1351, 1353, 1341, 5604, 22827, 22827] ;
-    for i = 1 : len
-        Qiskit_nCNOT_metric(i) = Qiskit_nCNOT_metric(i) .* Laplace_mat(i).normalization_factor ;
-        Qiskit_nG_metric(i) = Qiskit_nG_metric(i) .* Laplace_mat(i).normalization_factor ;
+    
+    
+    
+    LineWidth = 0.5 ;
+    color_gray = [0.7 0.7 0.7];
+    color_shallow_blue = [0.8, 0.8, 1.0];
+    color_gray2 = [0.9 0.9 0.9] ;
+
+    figure;
+   
+    
+    semilogy(1:len,bitble_nCNOT_metric,':ro','LineWidth',LineWidth,...
+        'MarkerSize',MarkerSize1,'MarkerFaceColor','r');
+    hold on;
+    semilogy(1:len,bitble2_nCNOT_metric,':bo','LineWidth',LineWidth,...
+        'MarkerSize',MarkerSize2,'MarkerFaceColor','b');
+    hold on;
+    semilogy(1:len,bitble3_nCNOT_metric,':o','LineWidth',LineWidth,...
+        'color', color_shallow_blue, 'MarkerSize',MarkerSize2,'MarkerFaceColor', color_shallow_blue);
+    hold on ;
+    semilogy(1:len,fable_nCNOT_metric,':o','LineWidth',LineWidth,...
+        'Color',color_gray,'MarkerSize',MarkerSize1,'MarkerFaceColor',color_gray);
+
+    h2 = legend(["BITBLE$^1$ CNOT","BITBLE$^2$ CNOT","BITBLE$^3$ CNOT","FLBLE CNOT"],'Location','northwest','Interpreter','latex','Orientation','vertical');
+    set(h2,'Box','off');
+    ax = gca;
+    set(gca, 'XTick', 1:len);
+    xlim([0.9,len+.1]);
+    if index == 3 || index == 4 
+        set(gca, 'XTickLabel', x_labels);
+        xlabel("$(n_x, n_y)$ qubit",'Interpreter','latex');
+    else
+        xlabel("$n$ qubit",'Interpreter','latex');
+    end
+    
+    ylabel('number of gates $\times$ normalization factor','Interpreter','latex');
+    
+    
+    h2 = legend(["BITBLE$^1$ CNOT","BITBLE$^2$ CNOT","BITBLE$^3$ CNOT","FABLE CNOT"],'Interpreter','latex','Location','southeast');
+    set(h2,'Box','off');
+
+     % index = 1 -- 1D non-periodic; index = 2 -- 1D periodic; index = 3 -- 2D non-periodic; index = 4 -- 2D periodic; 
+    if index == 1 
+        title("1D non-periodic") ;
+    elseif index == 2 
+        title("1D periodic") ;
+    elseif index == 3 
+        title("2D non-periodic") ;
+    else
+        title("2D periodic") ;
     end
 end
-
-
-for i = 1:len
-    fable_nCNOT_metric(i) = record_Laplace(index, i).fable_nCNOT_metric ;
-    fable_nG_metric(i) = record_Laplace(index, i).fable_nG_metric ;
-    fable_time(i) = record_Laplace(index, i).fable_time ;
-    bitble_nCNOT_metric(i) = record_Laplace(index, i).bitble_nCNOT_metric ;
-    bitble_nG_metric(i) = record_Laplace(index, i).bitble_nG_metric ;
-    bitble_time(i) = record_Laplace(index, i).bitble_time ;
-    bitble2_nCNOT_metric(i) = record_Laplace(index, i).bitble2_nCNOT_metric ;
-    bitble2_nG_metric(i) = record_Laplace(index, i).bitble2_nG_metric ;
-    bitble2_time(i) = record_Laplace(index, i).bitble2_time ;
-    bitble3_nCNOT_metric(i) = record_Laplace(index, i).bitble3_nCNOT_metric ;
-    bitble3_nG_metric(i) = record_Laplace(index, i).bitble3_nG_metric ;
-    bitble3_time(i) = record_Laplace(index, i).bitble3_time ;
-end
-
-
-
-LineWidth = 0.5 ;
-color_gray = [0.7 0.7 0.7];
-color_shallow_blue = [0.8, 0.8, 1.0];
-color_gray2 = [0.9 0.9 0.9] ;
-
-semilogy(1:len,bitble_nCNOT_metric,':ro','LineWidth',LineWidth,...
-    'MarkerSize',MarkerSize1,'MarkerFaceColor','r');
-% hold on;
-% semilogy(1:len,bitble_nG_metric,'--rs','LineWidth',LineWidth,...
-%     'MarkerSize',MarkerSize1,'MarkerFaceColor','r');
-hold on;
-semilogy(1:len,bitble2_nCNOT_metric,':bo','LineWidth',LineWidth,...
-    'MarkerSize',MarkerSize2,'MarkerFaceColor','b');
-% hold on;
-% semilogy(1:len,bitble2_nG_metric,':bs','LineWidth',LineWidth,...
-%     'MarkerSize',MarkerSize2,'MarkerFaceColor','b');
-hold on;
-semilogy(1:len,bitble3_nCNOT_metric,':o','LineWidth',LineWidth,...
-    'color', color_shallow_blue, 'MarkerSize',MarkerSize2,'MarkerFaceColor', color_shallow_blue);
-% hold on;
-% semilogy(1:len,bitble3_nG_metric,'--s','LineWidth',LineWidth,...
-%     'color', color_shallow_blue, 'MarkerSize',MarkerSize2,'MarkerFaceColor', color_shallow_blue);
-hold on ;
-semilogy(1:len,fable_nCNOT_metric,':o','LineWidth',LineWidth,...
-    'Color',color_gray,'MarkerSize',MarkerSize1,'MarkerFaceColor',color_gray);
-% hold on ;
-% semilogy(1:len,Qiskit_nCNOT_metric,':o','LineWidth',LineWidth,...
-%     'Color','k','MarkerSize',MarkerSize1,'MarkerFaceColor',color_gray2);
-% hold on;
-% semilogy(1:len,fable_nG_metric,':s','LineWidth',LineWidth,...
-%     'Color',color_gray,'MarkerSize',MarkerSize2,'MarkerFaceColor',color_gray);
-
-% hold on;
-% yyaxis right ;
-% y = zeros(len,4);
-% labels = cell(len,4); 
-% for i = 1:len
-%     y(i,:) = [record_Laplace(i).bitble_time, record_Laplace(i).bitble2_time, record_Laplace(i).bitble3_time, record_Laplace(i).fable_time ];
-%     labels(i,:) = {num2str(record_Laplace(i).bitble_time,"%.1f"), num2str(record_Laplace(i).bitble2_time,"%.1f"), num2str(record_Laplace(i).bitble3_time,"%.1f"), num2str(record_Laplace(i).fable_time,"%.1f")};
-% end
-% 
-% 
-% bar_fig = bar(y, "GroupWidth", 0.92) ;
-% % set(gca, 'XTickLabel',str, 'XTick',1:numel(str)) ;
-% bar_fig(1).FaceColor = 'r' ;
-% bar_fig(2).FaceColor = 'b' ;
-% bar_fig(3).FaceColor = color_shallow_blue ;
-% bar_fig(4).FaceColor = color_gray;
-% 
-% % set(gca,'ytick',[],'yticklabel',[]);
-% 
-% 
-% for i=1:length(bar_fig)
-%     xtips = bar_fig(i).XEndPoints;
-%     xtips = xtips(1:len) ;
-%     ytips = bar_fig(i).YEndPoints;
-%     ytips = ytips(1:len) ;
-%     sublabels = labels(:,i);
-%     % t = text(xtips,ytips,sublabels,'HorizontalLlignment','center',...
-%     %     'VerticalLlignment','bottom') ;
-%     if i == 1
-%         t = text(xtips+0.1,ytips + 0.2,sublabels,'HorizontalLlignment','center',...
-%         'VerticalLlignment','bottom','FontWeight','bold') ;
-%     else
-%         t = text(xtips+0.1,ytips + 0.2,sublabels,'HorizontalLlignment','center',...
-%             'VerticalLlignment','bottom') ;
-%     end
-%     set(t,'Rotation',90);
-% end
-% 
-% ylabel('time(s)','FontWeight','normal');
-% ylim([0,2.*max(fable_time)]) ;
-% axis on;
-
-h2 = legend(["BITBLE$^1$ CNOT","BITBLE$^2$ CNOT","BITBLE$^3$ CNOT","FLBLE CNOT"],'Location','northwest','Interpreter','latex','Orientation','vertical');
-set(h2,'Box','off');
-ax = gca;
-set(gca, 'XTick', 1:len);
-% set(gca, 'XTickLabel', x_labels);
-
-% ax.YLxis(1).Color = 'k';
-% ax.YLxis(2).Color = 'k';
-
-% x_labels = {2,3,4,5,6,7};
-xlim([0.9,len+.1]);
-% set(gca, 'XTick', 2:len);
-if index == 3 || index == 4 
-    set(gca, 'XTickLabel', x_labels);
-    xlabel("$(n_x, n_y)$ qubit",'Interpreter','latex');
-else
-    xlabel("$n$ qubit",'Interpreter','latex');
-end
-
-ylabel('number of gates $\times$ normalization factor','Interpreter','latex');
-
-
-h2 = legend(["BITBLE$^1$ CNOT","BITBLE$^2$ CNOT","BITBLE$^3$ CNOT","FABLE CNOT"],'Interpreter','latex','Location','southeast');
-set(h2,'Box','off');
