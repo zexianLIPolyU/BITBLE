@@ -97,13 +97,8 @@ Link: [https://github.com/ChunlinYangHEU/BITBLE_python](https://github.com/Chunl
 
 ## 1.4. Performance Comparsion ##
 
-Setting of ``bitble`` and [``fable``](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/test_fable) programe:
-
     ```
-    offset = 0 ;
-    logging = true ;
-    compr_type = 'cutoff' ;
-    circuit_sim = false ;
+    run('test_random.m');
     ```
 
 ### Time of compiling $2^{n}\times 2^{n}$ random matrices (compute the single parameters and CNOT logical on a 32GB RAM wins computer):
@@ -124,6 +119,10 @@ Setting of ``bitble`` and [``fable``](https://github.com/zexianLIPolyU/BITBLE-SI
 In this experiment, `bitble` and `fable` only compile the rotation's parameters, and `Qiskit` encoding $2^{n+1}\times 2^{n+1}$ random unitary by unitary synthesis.
 
 ### CNOT's size metric of encoding ''Peppers'' imgae (CNOT's size metric $=$ CNOT counts $\times$ normalization factor):
+
+    ```
+    run('test_picture.m');
+    ```
 
 ![CNOT's Size Metric of Encoding `Peppers` Image](figs/fig_peppers.svg)
 
