@@ -1,6 +1,6 @@
 # Binary Tree Block-Encoding (BITBLE) 
 Binary Tree Block-Encoding (BITBLE) is a block-encoding quantum circuits for encoding general matrices. 
-These two algorithms are bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab) repository in MATLAB, and [mindquantum](https://github.com/mindspore-ai/mindquantum)/[PyQPanda](https://github.com/OriginQ/pyQPanda-Toturial/blob/master/source/index.rst) in Python
+This algorithms is bulit on top of [QCLAB](https://github.com/QuantumComputingLab/qclab) repository in MATLAB, and [mindquantum](https://github.com/mindspore-ai/mindquantum)/[PyQPanda](https://github.com/OriginQ/pyQPanda-Toturial/blob/master/source/index.rst) in Python
 
 References: [https://arxiv.org/abs/2504.05624](https://arxiv.org/abs/2504.05624)
 
