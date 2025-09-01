@@ -35,9 +35,9 @@ In order to run the MATLAB implementation of [state_preparation](https://github.
 
 ## 1.2. Binary Tree Block-Encoding (BITBLE) - MATLAB Implementation ##
 
-In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/bitble-qclab):
+In order to run the MATLAB implementation of [BITBLE](https://github.com/zexianLIPolyU/BITBLE/tree/main/bitble-qclab):
 
-1. Down [BITBLE](https://github.com/zexianLIPolyU/BITBLE-SIABLE_matlab/tree/main/bitble-qclab) repository.
+1. Down [BITBLE](https://github.com/zexianLIPolyU/BITBLE/tree/main/bitble-qclab) repository.
 2. Unzip it and add `QCLAB` files and `bitble.m` (or `bitble2.m` or `bitble3.m`) into your MATLAB path.
     ```
     cd("bitble-qclab")
