@@ -129,7 +129,7 @@ In this experiment, `bitble` and `fable` only compile the rotation's parameters,
 References:
 
 -BITBLE:
-[https://github.com/zexianLIPolyU/BITBLE-SIABLE_MATLAB](https://github.com/zexianLIPolyU/BITBLE-SIABLE_MATLAB)
+[https://github.com/zexianLIPolyU/BITBLE](https://github.com/zexianLIPolyU/BITBLE)
 
 -FABLE:
 [https://github.com/QuantumComputingLab/fable](https://github.com/QuantumComputingLab/fable)
