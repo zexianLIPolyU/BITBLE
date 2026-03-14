@@ -147,6 +147,20 @@ Single Ancilla Block-Encoding (SIABLE)
 SIABLE have optimal normalization factor $\Vert A\Vert_2$ with single ancilla qubit.
 
 
+## Citation
+```BibTeX
+@ARTICLE{11216010,
+  author={Li, Zexian and Zhang, Xiao-Ming and Yang, Chunlin and Zhang, Guofeng},
+  journal={IEEE Transactions on Quantum Engineering}, 
+  title={Binary Tree Block Encoding of Classical Matrix}, 
+  year={2026},
+  volume={7},
+  number={},
+  pages={1-18},
+  keywords={Encoding;Protocols;Logic gates;Binary trees;Sparse matrices;Multiplexing;Qubit;Quantum circuit;Quantum state;Measurement;Circuit size;quantum circuit;quantum compiling;state preparation;unitary synthesis},
+  doi={10.1109/TQE.2025.3624699}}
+}
+```
 
 
 
